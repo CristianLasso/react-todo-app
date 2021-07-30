@@ -16,7 +16,6 @@ const TaskContainer = () => {
       );
 
       const tasks = response.data.slice(0, 5);
-      console.log(tasks);
       state.setTasks(tasks);
     } catch (error) {}
   };
@@ -24,6 +23,7 @@ const TaskContainer = () => {
   useEffect(() => {
     loadTasks();
   }, []);
+
   return (
     <div className="taskContainer">
       <TaskForm />
